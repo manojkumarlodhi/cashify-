@@ -19,6 +19,10 @@ function Header() {
   const [isfindnew, setfindnew] = useState(false);
   const [isrecycle, setrecycle] = useState(false);
   const [isstore, setstore] = useState(false);
+  const [ismorecashifystore, setmorecashifystore] = useState(false);
+  const [ismoreall, setmoreall] = useState(false);
+  const [issellphone, setsellphone] = useState(false);
+  const [isbuyphone, setbuyphone] = useState(false);
 
 
   useEffect(() => {
@@ -115,7 +119,7 @@ function Header() {
               <FaChevronDown className="ml-2" />
             </button>
             {isAllOpen && (
-              <div className="absolute bg-white shadow-lg mt-2 rounded-md z-10 w-[300px] h-auto">
+              <div className="absolute bg-white shadow-lg  rounded-md z-10 w-[300px] h-auto">
                 <div className="px-4 py-2">
                   <h3 className="font-bold text-lg text-gray-800 mt-4 mb-3">Sell</h3>
                   <div className="flex flex-col">
@@ -806,6 +810,89 @@ function Header() {
               </div>
             )}
           </div>
+          <div className="relative"
+            onMouseEnter={() => setsellphone(true)}
+            onMouseLeave={() => setsellphone(false)}>
+            <button className="inline-flex justify-center items-center text-md font-medium">
+              Sell phone
+              <FaChevronDown className="ml-2" />
+            </button>
+            {issellphone && (
+              <div className='absolute bg-white shadow-lg  rounded-md z-10 w-[250px] h-auto p-4 '>
+                <h3 className="font-bold text-lg text-gray-800 mb-3">Top Brand</h3>
+                <ul>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Apple
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Xiaomi
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Samsung
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Oneplush
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Nokia
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Poco
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      More Phone Brands
+                    </Link>
+                  </li>
+                  <h3 className="font-bold text-lg text-gray-800 mb-3">Top Selling Phones</h3>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Apple iPhone 12
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Samsung Galaxy Note 20
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Apple iPhone 11
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      One Plush 9 Pro
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Xiaomi Redmi Note 4
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Apple iPhone 6
+                    </Link>
+                  </li>
+
+
+                </ul>
+              </div>
+            )}
+          </div>
 
           <div className="relative">
             <button className="inline-flex justify-center items-center text-md font-medium">
@@ -813,11 +900,88 @@ function Header() {
               <FaChevronDown className="ml-2" />
             </button>
           </div>
-          <div className="relative">
+          <div className="relative"
+            onMouseEnter={() => setbuyphone(true)}
+            onMouseLeave={()=>setbuyphone(false)}>
             <button className="inline-flex justify-center items-center text-md font-medium">
               Buy Phone
               <FaChevronDown className="ml-2" />
             </button>
+            {isbuyphone && (
+              <div className='absolute bg-white shadow-lg  rounded-md z-10 w-[280px] h-auto p-4 '>
+                <ul>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                    Refurbished Phones
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                    Refurbished Lptops
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                    Refurbished Smart Watches
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                    Refurbished Tablets
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Refurbished Gaming Consoles
+                    </Link>
+                  </li>
+                  <h3 className="font-bold text-lg text-gray-800 mb-3">Top Brand</h3>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Samsung
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Apple
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                     Poco
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Xiaomi 
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      One plush
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      nokia
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                     vivo
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      All Brands
+                    </Link>
+                  </li>
+
+                </ul>
+
+              </div>
+            )}
+
           </div>
           <div className="relative">
             <button className="inline-flex justify-center items-center text-md font-medium">
@@ -831,17 +995,134 @@ function Header() {
               <FaChevronDown className="ml-2" />
             </button>
           </div>
-          <div className="relative">
+          <div className="relative"
+            onMouseEnter={() => setmorecashifystore(true)}
+            onMouseLeave={() => setmorecashifystore(false)}>
             <button className="inline-flex justify-center items-center text-md font-medium">
               Cashify Store
               <FaChevronDown className="ml-2" />
+              {ismorecashifystore && (
+                <div className='absolute bg-white shadow-lg mt-2 rounded-md z-10 w-[250px] h-auto p-4 ml-[200px]  mt-[450px]'>
+                  <h3 className="font-bold text-lg text-gray-800 mb-3">More in Cashify Store</h3>
+                  <ul>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                        Dehli
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                        Gurgaon
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                        Noida
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                        Bengaluru
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                        pune
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                        Agra
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                        patna
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                        More
+                      </Link>
+                    </li>
+
+
+                  </ul>
+
+                </div>
+
+              )}
             </button>
           </div>
-          <div className="relative">
+          <div className="relative"
+            onMouseEnter={() => setmoreall(true)}
+            onMouseLeave={() => setmoreall(false)}>
             <button className="inline-flex justify-center items-center text-md font-medium">
               More
               <FaChevronDown className="ml-2" />
             </button>
+            {ismoreall && (
+              <div className='absolute bg-white shadow-lg  rounded-md z-10 w-[250px] h-auto p-4 ml-[-150px]'>
+                <ul>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      New Offers
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Partner with us
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Contact us
+                    </Link>
+                  </li><li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Warranty Policy
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Refer & Earn
+                    </Link>
+                  </li>
+                  <h3 className="font-bold text-lg text-gray-800 mb-3">Company</h3>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      About
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Careers
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Articles
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Become Super Prtner
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Press Releases
+                    </Link>
+                  </li>
+                  <li className="mb-1">
+                    <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Terms & condition
+                    </Link>
+                  </li>
+                </ul>
+
+              </div>
+            )}
           </div>
         </div>
       </div>
