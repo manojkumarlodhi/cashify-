@@ -23,6 +23,7 @@ function Header() {
   const [ismoreall, setmoreall] = useState(false);
   const [issellphone, setsellphone] = useState(false);
   const [isbuyphone, setbuyphone] = useState(false);
+  const [isbuylaptop,setbuylaptop]=useState(false);
 
 
   useEffect(() => {
@@ -983,17 +984,79 @@ function Header() {
             )}
 
           </div>
+
+
+
+
+
+
           <div className="relative">
             <button className="inline-flex justify-center items-center text-md font-medium">
               Find New Gadget
               <FaChevronDown className="ml-2" />
             </button>
           </div>
-          <div className="relative">
+
+
+
+
+
+          <div className="relative"
+          onMouseEnter={()=>setbuylaptop(true)}
+          onMouseLeave={()=>setbuylaptop(false)}>
             <button className="inline-flex justify-center items-center text-md font-medium">
               Buy Laptop
               <FaChevronDown className="ml-2" />
             </button>
+            {isbuylaptop && (
+              <div className='absolute bg-white shadow-lg mt-2 rounded-md z-10 w-[250px] h-auto p-4 '>
+                  <h3 className="font-bold text-lg text-gray-800 mb-3">Top Brand</h3>
+                  <ul>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                        Apple
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                       Dell
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                       Hp
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                        Acer
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                        Asus
+                      </Link>
+                    </li>
+                    <h3 className="font-bold text-lg text-gray-800 mb-3">Best Selling Laptop</h3>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Apple MacBook Air Mid 2017 Refurshed
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                      Apple MacBook Air  Early 2015 Refurshed
+                      </Link>
+                    </li>
+                    <li className="mb-1">
+                      <Link to="#" className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition duration-200">
+                        Apple MacBook Air 2020 Refurshed
+                      </Link>
+                    </li>
+                  </ul>
+
+              </div>
+            )}
           </div>
           <div className="relative"
             onMouseEnter={() => setmorecashifystore(true)}
